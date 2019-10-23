@@ -1,0 +1,189 @@
+Script started on Mon 02 Sep 2019 05:51:41 AM UTC
+shuki_goto@tabular2:~/fraud/code$ sh train[K[K[K[K[K[K[K[Kpython bin/train.py 
+Traceback (most recent call last):
+  File "bin/train.py", line 22, in <module>
+    sub = pd.read_csv('../input/dataset/submission.csv')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/parsers.py", line 685, in parser_f
+    return _read(filepath_or_buffer, kwds)
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/parsers.py", line 457, in _read
+    parser = TextFileReader(fp_or_buf, **kwds)
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/parsers.py", line 895, in __init__
+    self._make_engine(self.engine)
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/parsers.py", line 1135, in _make_engine
+    self._engine = CParserWrapper(self.f, **self.options)
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/parsers.py", line 1906, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+  File "pandas/_libs/parsers.pyx", line 380, in pandas._libs.parsers.TextReader.__cinit__
+  File "pandas/_libs/parsers.pyx", line 687, in pandas._libs.parsers.TextReader._setup_parser_source
+FileNotFoundError: [Errno 2] File b'../input/dataset/submission.csv' does not exist: b'../input/dataset/submission.csv'
+Error in sys.excepthook:
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/apport_python_hook.py", line 63, in apport_excepthook
+    from apport.fileutils import likely_packaged, get_recent_crashes
+  File "/usr/lib/python3/dist-packages/apport/__init__.py", line 5, in <module>
+    from apport.report import Report
+  File "/usr/lib/python3/dist-packages/apport/report.py", line 30, in <module>
+    import apport.fileutils
+  File "/usr/lib/python3/dist-packages/apport/fileutils.py", line 23, in <module>
+    from apport.packaging_impl import impl as packaging
+  File "/usr/lib/python3/dist-packages/apport/packaging_impl.py", line 23, in <module>
+    import apt
+  File "/usr/lib/python3/dist-packages/apt/__init__.py", line 23, in <module>
+    import apt_pkg
+ModuleNotFoundError: No module named 'apt_pkg'
+
+Original exception was:
+Traceback (most recent call last):
+  File "bin/train.py", line 22, in <module>
+    sub = pd.read_csv('../input/dataset/submission.csv')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/parsers.py", line 685, in parser_f
+    return _read(filepath_or_buffer, kwds)
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/parsers.py", line 457, in _read
+    parser = TextFileReader(fp_or_buf, **kwds)
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/parsers.py", line 895, in __init__
+    self._make_engine(self.engine)
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/parsers.py", line 1135, in _make_engine
+    self._engine = CParserWrapper(self.f, **self.options)
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/parsers.py", line 1906, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+  File "pandas/_libs/parsers.pyx", line 380, in pandas._libs.parsers.TextReader.__cinit__
+  File "pandas/_libs/parsers.pyx", line 687, in pandas._libs.parsers.TextReader._setup_parser_source
+FileNotFoundError: [Errno 2] File b'../input/dataset/submission.csv' does not exist: b'../input/dataset/submission.csv'
+shuki_goto@tabular2:~/fraud/code$ python bin/train.py [Kpython bin/train.py htop[Kpython bin/train.py 
+Training until validation scores don't improve for 500 rounds.
+[200]	training's auc: 0.956441	valid_1's auc: 0.889632
+[400]	training's auc: 0.977752	valid_1's auc: 0.902776
+[600]	training's auc: 0.989191	valid_1's auc: 0.910893
+[800]	training's auc: 0.99493	valid_1's auc: 0.915383
+[1000]	training's auc: 0.997655	valid_1's auc: 0.917951
+[1200]	training's auc: 0.998956	valid_1's auc: 0.919283
+[1400]	training's auc: 0.999498	valid_1's auc: 0.920248
+[1600]	training's auc: 0.999753	valid_1's auc: 0.920691
+[1800]	training's auc: 0.999884	valid_1's auc: 0.920852
+[2000]	training's auc: 0.999951	valid_1's auc: 0.921205
+[2200]	training's auc: 0.99998	valid_1's auc: 0.921462
+[2400]	training's auc: 0.999991	valid_1's auc: 0.921745
+[2600]	training's auc: 0.999996	valid_1's auc: 0.921856
+[2800]	training's auc: 0.999998	valid_1's auc: 0.921902
+[3000]	training's auc: 0.999999	valid_1's auc: 0.92202
+[3200]	training's auc: 1	valid_1's auc: 0.922094
+[3400]	training's auc: 1	valid_1's auc: 0.922007
+[3600]	training's auc: 1	valid_1's auc: 0.922018
+Early stopping, best iteration is:
+[3136]	training's auc: 1	valid_1's auc: 0.922127
+Fold 1 | AUC: 0.9221273706583173
+Training until validation scores don't improve for 500 rounds.
+[200]	training's auc: 0.955544	valid_1's auc: 0.909522
+[400]	training's auc: 0.977604	valid_1's auc: 0.922024
+[600]	training's auc: 0.989946	valid_1's auc: 0.930227
+[800]	training's auc: 0.995676	valid_1's auc: 0.934325
+[1000]	training's auc: 0.998194	valid_1's auc: 0.936362
+[1200]	training's auc: 0.999229	valid_1's auc: 0.937419
+[1400]	training's auc: 0.999664	valid_1's auc: 0.93789
+[1600]	training's auc: 0.999847	valid_1's auc: 0.938143
+[1800]	training's auc: 0.999937	valid_1's auc: 0.938006
+[2000]	training's auc: 0.999974	valid_1's auc: 0.937805
+Early stopping, best iteration is:
+[1551]	training's auc: 0.999815	valid_1's auc: 0.938185
+Fold 2 | AUC: 0.9381854636874014
+Training until validation scores don't improve for 500 rounds.
+[200]	training's auc: 0.956658	valid_1's auc: 0.910106
+[400]	training's auc: 0.977993	valid_1's auc: 0.923868
+[600]	training's auc: 0.989935	valid_1's auc: 0.931696
+[800]	training's auc: 0.995507	valid_1's auc: 0.934866
+[1000]	training's auc: 0.998068	valid_1's auc: 0.936042
+[1200]	training's auc: 0.999161	valid_1's auc: 0.936215
+[1400]	training's auc: 0.999639	valid_1's auc: 0.93615
+[1600]	training's auc: 0.999842	valid_1's auc: 0.935913
+Early stopping, best iteration is:
+[1110]	training's auc: 0.998785	valid_1's auc: 0.936316
+Fold 3 | AUC: 0.9363163177192464
+Training until validation scores don't improve for 500 rounds.
+[200]	training's auc: 0.954677	valid_1's auc: 0.925189
+[400]	training's auc: 0.977036	valid_1's auc: 0.939122
+[600]	training's auc: 0.989663	valid_1's auc: 0.947244
+[800]	training's auc: 0.995497	valid_1's auc: 0.950627
+[1000]	training's auc: 0.998113	valid_1's auc: 0.952052
+[1200]	training's auc: 0.999209	valid_1's auc: 0.952624
+[1400]	training's auc: 0.999664	valid_1's auc: 0.952768
+[1600]	training's auc: 0.999853	valid_1's auc: 0.95286
+[1800]	training's auc: 0.999938	valid_1's auc: 0.952557
+[2000]	training's auc: 0.999977	valid_1's auc: 0.952443
+Early stopping, best iteration is:
+[1594]	training's auc: 0.999849	valid_1's auc: 0.952866
+Fold 4 | AUC: 0.9528664857205036
+Training until validation scores don't improve for 500 rounds.
+[200]	training's auc: 0.956506	valid_1's auc: 0.901602
+[400]	training's auc: 0.97747	valid_1's auc: 0.915484
+[600]	training's auc: 0.989764	valid_1's auc: 0.924255
+[800]	training's auc: 0.995411	valid_1's auc: 0.927964
+[1000]	training's auc: 0.997983	valid_1's auc: 0.929319
+[1200]	training's auc: 0.999143	valid_1's auc: 0.929625
+[1400]	training's auc: 0.999621	valid_1's auc: 0.929524
+[1600]	training's auc: 0.999835	valid_1's auc: 0.929366
+Early stopping, best iteration is:
+[1213]	training's auc: 0.999187	valid_1's auc: 0.929675
+Fold 5 | AUC: 0.9296754238314427
+
+Mean AUC = 0.9358342123233823
+Out of folds AUC = 0.9357895936635605
+shuki_goto@tabular2:~/fraud/code$ [Kshuki_goto@tabular2:~/fraud/code$ ls
+[0m[01;34mbin[0m                      [01;34mlibs[0m  log_epoch      submission.csv
+feature_importances.csv  [01;34mlog[0m   mk_dataset.sh
+shuki_goto@tabular2:~/fraud/code$ pwd
+/home/shuki_goto/fraud/code
+shuki_goto@tabular2:~/fraud/code$ [Kshuki_goto@tabular2:~/fraud/code$ vim vin[K[K[Kbin/train.py 
+[?1049h[?1h=[1;13r[34l[34h[?25h[23m[24m[0m[38;5;252m[48;5;233m[?25l[13;1H[97m[41mE325: ATTENTION[0m[38;5;252m[48;5;233m                                                                   [13;1H
+                                                                                  [13;1HFound a swap file by the name "bin/.train.py.swp"
+                                                                                  [13;11Howned by: shuki_goto   dated: Mon Sep  2 05:52:40 2019
+                                                                                  [13;10Hfile name: ~shuki_goto/fraud/code/bin/train.py
+                                                                                  [13;11Hmodified: no
+                                                                                  [13;10Huser name: shuki_goto   host name: tabular2
+                                                                                  [13;9Hprocess ID: 5967 (still running)
+                                                                                  [13;1HWhile opening file "bin/train.py"
+                                                                                  [13;14Hdated: Mon Sep  2 05:52:36 2019
+                                                                                  [13;1H
+                                                                                  [13;1H(1) Another program may be editing the same file.  If this is the case,
+                                                                                  [13;5Hbe careful not to end up with two different instances of the same
+                                                                                  [13;1H[38;5;121m-- More --[34h[?25h SPACE/d/j: screen/page/line down, b/u/k: up, q: quit [0m[38;5;252m[48;5;233m                                                                [38;5;121m-- More --[0m[38;5;252m[48;5;233m          [38;5;121m-- More --[0m[38;5;252m[48;5;233m          [38;5;121m-- More --[0m[38;5;252m[48;5;233m          [38;5;121m-- More --[0m[38;5;252m[48;5;233m          [38;5;121m-- More --[0m[38;5;252m[48;5;233m          [38;5;121m-- More --[0m[38;5;252m[48;5;233m          [38;5;121m-- More --[0m[38;5;252m[48;5;233m          [38;5;121m-- More --[0m[38;5;252m[48;5;233m          [38;5;121m-- More --[0m[38;5;252m[48;5;233m          (2) An edit session for this file crashed.
+                                                                                  [13;5HIf this is the case, use ":recover" or "vim -r bin/train.py"
+                                                                                  [13;5Hto recover the changes (see ":help recovery").
+                                                                                  [13;5HIf you did this already, delete the swap file "bin/.train.py.swp"
+                                                                                  [13;5Hto avoid this message.
+                                                                                  [13;1H
+                                                                                  [13;1H[38;5;121mSwap file "bin/.train.py.swp" already exists![0m[38;5;252m[48;5;233m
+                                                                                  [13;1H[38;5;121m[O]pen Read-Only, (E)dit anyway, (R)ecover, (Q)uit, (A)bort: [0m[38;5;252m[48;5;233m                                                             
+[39;49m[?1l>[?1049lshuki_goto@tabular2:~/fraud/code$ !
+shuki_goto@tabular2:~/fraud/code$ vim train[K[K[K[K[Kbin/train.py 
+[?1049h[?1h=[1;13r[34l[34h[?25h[23m[24m[0m[38;5;252m[48;5;233m[?25l[13;1H[97m[41mE325: ATTENTION[0m[38;5;252m[48;5;233m                                                                   [13;1H
+                                                                                  [13;1HFound a swap file by the name "bin/.train.py.swp"
+                                                                                  [13;11Howned by: shuki_goto   dated: Mon Sep  2 05:52:40 2019
+                                                                                  [13;10Hfile name: ~shuki_goto/fraud/code/bin/train.py
+                                                                                  [13;11Hmodified: no
+                                                                                  [13;10Huser name: shuki_goto   host name: tabular2
+                                                                                  [13;9Hprocess ID: 5967 (still running)
+                                                                                  [13;1HWhile opening file "bin/train.py"
+                                                                                  [13;14Hdated: Mon Sep  2 05:52:36 2019
+                                                                                  [13;1H
+                                                                                  [13;1H(1) Another program may be editing the same file.  If this is the case,
+                                                                                  [13;5Hbe careful not to end up with two different instances of the same
+                                                                                  [13;1H[38;5;121m-- More --[34h[?25h SPACE/d/j: screen/page/line down, b/u/k: up, q: quit [0m[38;5;252m[48;5;233m                                                                    file when making changes.  Quit, or continue with caution.
+                                                                                  [13;1H[38;5;121m-- More --[0m[38;5;252m[48;5;233m          (2) An edit session for this file crashed.
+                                                                                  [13;1H[38;5;121m-- More --[0m[38;5;252m[48;5;233m              If this is the case, use ":recover" or "vim -r bin/train.py"
+                                                                                  [13;1H[38;5;121m-- More --[0m[38;5;252m[48;5;233m              to recover the changes (see ":help recovery").
+                                                                                  [13;1H[38;5;121m-- More --[0m[38;5;252m[48;5;233m              If you did this already, delete the swap file "bin/.train.py.swp"
+                                                                                  [13;1H[38;5;121m-- More --[0m[38;5;252m[48;5;233m              to avoid this message.
+                                                                                  [13;1H[38;5;121m-- More --[0m[38;5;252m[48;5;233m          
+                                                                                  [13;1H[38;5;121m-- More --[0m[38;5;252m[48;5;233m          [38;5;121mSwap file "bin/.train.py.swp" already exists![0m[38;5;252m[48;5;233m
+                                                                                  [13;1H[38;5;121m-- More --[0m[38;5;252m[48;5;233m          [38;5;121m[O]pen Read-Only, (E)dit anyway, (R)ecover, (Q)uit, (A)bort: [0m[38;5;252m[48;5;233m                                                             [?25l"bin/train.py" 70L, 2320C[1;1H[38;5;118mfrom[0m[38;5;252m[48;5;233m sklearn.model_selection [38;5;118mimport[0m[38;5;252m[48;5;233m KFold   
+[38;5;118mfrom[0m[38;5;252m[48;5;233m tqdm [38;5;118mimport[0m[38;5;252m[48;5;233m tqdm
+[38;5;118mfrom[0m[38;5;252m[48;5;233m sklearn.metrics [38;5;118mimport[0m[38;5;252m[48;5;233m roc_auc_score                              
+[38;5;118mimport[0m[38;5;252m[48;5;233m sys                                                           
+sys.path.append([38;5;144m'./'[0m[38;5;252m[48;5;233m)                                         
+[38;5;118mfrom[0m[38;5;252m[48;5;233m libs.get_params [38;5;118mimport[0m[38;5;252m[48;5;233m get_lgb_params
+[38;5;118mimport[0m[38;5;252m[48;5;233m lightgbm [1m[38;5;161mas[0m[38;5;252m[48;5;233m lgb                                          
+[38;5;118mimport[0m[38;5;252m[48;5;233m numpy [1m[38;5;161mas[0m[38;5;252m[48;5;233m np                                
+[38;5;118mimport[0m[38;5;252m[48;5;233m pandas [1m[38;5;161mas[0m[38;5;252m[48;5;233m pd                                                  
+[38;5;118mimport[0m[38;5;252m[48;5;233m tables             
+[38;5;118mimport[0m[38;5;252m[48;5;233m gc
+                                             [13;65H1,1[11CTop[1;1H[34h[?25h[?25l[1;12r[1;1H[6M[1;13r[7;1H[38;5;118mimport[0m[38;5;252m[48;5;233m matplotlib.pyplot [1m[38;5;161mas[0m[38;5;252m[48;5;233m plt                                                   [8;1H[38;5;118mimport[0m[38;5;252m[48;5;233m seaborn [1m[38;5;161mas[0m[38;5;252m[48;5;233m sns                                                             [9;1Hsns.set()                                                                         [10;1H                                                                                  [11;1Hdata_folder = [38;5;144m'../input/preprocessed_dataset/'[0m[38;5;252m[48;5;233m                                    [12;1H                                                                                  [13;1H                         [39C   [11C   [13;65H7,1[11C10%[1;1H[34h[?25h[?25l[1;12r[1;1H[6M[1;13r[7;1HX = pd.read_hdf(data_folder+[38;5;144m'X.hdf'[0m[38;5;252m[48;5;233m, [38;5;144m'df'[0m[38;5;252m[48;5;233m, engine=[38;5;144m'python'[0m[38;5;252m[48;5;233m)                       [8;1HX_test = pd.read_hdf(data_folder+[38;5;144m'X_test.hdf'[0m[38;5;252m[48;5;233m, [38;5;144m'df'[0m[38;5;252m[48;5;233m, engine=[38;5;144m'python'[0m[38;5;252m[48;5;233m)             [9;1Hy = pd.read_hdf(data_folder+[38;5;144m'y.hdf'[0m[38;5;252m[48;5;233m, [38;5;144m'df'[0m[38;5;252m[48;5;233m, engine=[38;5;144m'python'[0m[38;5;252m[48;5;233m)                       [10;1Hsub = pd.read_csv([38;5;144m'../input/dataset/sample_submission.csv'[0m[38;5;252m[48;5;233m)                       [11;1H                                                                                  [12;1HNFOLDS = [38;5;135m5[0m[38;5;252m[48;5;233m                                                                        [13;65H   [11C   [13;65H13,1[10C20%[1;1H[34h[?25h[?25l[1;12r[1;1H[6M[1;13r[7;1Hfolds = KFold(n_splits=NFOLDS)                                                    [8;1H                                                                                  [9;1Hparams = get_lgb_params()                                                         [10;1H                                                                                  [11;1Hcolumns = X.columns                                                               [12;1Hsplits = folds.split(X, y)                                                        [13;65H    [10C   [13;65H19,1[10C31%[1;1H[34h[?25h[?25l[1;12r[1;1H[6M[1;13r[7;1Hy_preds = np.zeros(X_test.shape[[38;5;135m0[0m[38;5;252m[48;5;233m])                                               [8;1Hy_oof = np.zeros(X.shape[[38;5;135m0[0m[38;5;252m[48;5;233m])                                                      [9;1Hscore = [38;5;135m0[0m[38;5;252m[48;5;233m                                                                         [10;1H                                                                                  [11;1Hfeature_importances = pd.DataFrame()                                              [12;1Hfeature_importances[[38;5;144m'feature'[0m[38;5;252m[48;5;233m] = columns                                          [13;65H    [10C   [13;65H25,1[10C41%[1;1H[34h[?25h[?25l[1;12r[1;1H[6M[1;13r[7;1H                                                                                  [8;1H[1m[38;5;161mfor[0m[38;5;252m[48;5;233m fold_n, (train_index, valid_index) [38;5;161min[0m[38;5;252m[48;5;233m [38;5;118menumerate[0m[38;5;252m[48;5;233m(splits):                      [9;1H    X_train, X_valid = X[columns].iloc[train_index], X[columns].iloc[valid_index] [10;1H    y_train, y_valid = y.iloc[train_index], y.iloc[valid_index]                   [11;1H                      
